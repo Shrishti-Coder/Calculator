@@ -4,43 +4,55 @@
   <title>Calculator</title>
   <style>
     body{
-        margin: 0;
+       
+
         padding: 0;
         font-family: Arial, Helvetica, sans-serif;
         box-sizing: border-box;
     }
     .container{
-  
-  width: 90%;
+      width: 490px;
+margin-left: 600px;
+padding-top: 0px;
+padding-bottom: 0px;
   height: auto;
   background: rgb(221, 221, 254);
 display: flex;
 align-items: center;
 justify-content: center;
-
-  margin-left: 90px;
-  margin-top: 10px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  border: 1px solid #ccc;  
+border-radius: 10px;
+    margin-top: 60px;
+ 
+  
+  }
+  h1{
+    
+  text-align: center;
+  text-decoration: underline;
+   
+  text-decoration-style: double;
+  font-size: 70px;
   }
 .calculator
 {
-    background: rgba(17, 84, 4, 0.686);
-    padding:40px 2px 40px 40px;
+    background: rgba(0, 0, 0, 0.75);
+    height: 500px;
+width: 400px;
+padding: 40px;
     border: 2px solid;
     border-radius: 10px;
+    
 }
 .calculator  button
 {
     border: 0;
     outline: 0;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     border-radius: 10px;
     box-shadow: -8px -8px 15px rgb(255, 255, 255,0.4),5px 5px 15px rgb(0, 0,0,0.5);
     background: transparent;
-    font-size: 30px;
+    font-size: 20px;
     color: white;
     cursor: pointer;
     margin: 10px;
@@ -49,13 +61,16 @@ justify-content: center;
 .disp {
 display: flex;
 justify-content: flex-end;
-    margin: 0px 55px 20px 1px;
+    margin: 0px 70px 20px 1px;
+    width: 400px;
+    height: 60px;
    
 }
  .disp input{
     text-align: right;
+    
     flex: 1;
-    font-size: 45px;
+    font-size: 30px;
     box-shadow: none;
     padding: 10px;
     color: #ffffff;
@@ -65,14 +80,15 @@ justify-content: flex-end;
 .res {
 display: flex;
 justify-content: flex-end;
-margin: 20px 55px 20px 1px;
-
+margin: 0px 70px 20px 1px;
+    width: 400px;
+    height: 60px;
    
 }
  .res input{
     text-align: right;
     flex: 1;
-    font-size: 45px;
+    font-size: 30px;
     box-shadow: none;
     color: #ffffff;
     border-radius: 5px;
@@ -84,6 +100,7 @@ margin: 20px 55px 20px 1px;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 5px;
   font-size: 30px;
+  width: 450px;
 }
 
 
@@ -91,7 +108,7 @@ margin: 20px 55px 20px 1px;
 {
     border: 0;
     outline: 0;
-    width: 450px;
+    width: 350px;
     font-size: 30px;
     font-weight: bolder;
     height: 70px;
@@ -103,16 +120,28 @@ margin: 20px 55px 20px 1px;
     cursor: pointer;
     margin: 20px 20px 0px 20px;
 }
+
+.key .operator1
+{
+    color: #f00;
+    font-size: 30px;
+    font-weight: bolder;
+    
+
+}
 .key .operator
 {
-    color: aquamarine;
-    font-size: 30px;
+    color: #f00;
+    font-size: 20px;
     font-weight: bold;
 }
 
   </style>
 </head>
 <body>
+  <h1>
+    CALCULATOR
+  </h1>
     <div class="container">
         
   <div class="calculator">
@@ -127,7 +156,7 @@ margin: 20px 55px 20px 1px;
     <div class="key">
       <button class="operator" onclick="clearDisplay()">C</button>
       <button  class="operator" onclick="appendTo('/')">/</button>
-      <button  class="operator" onclick="appendTo('*')">*</button>
+      <button  class="operator1" onclick="appendTo('*')">*</button>
       <button class="operator"  onclick="deleteD()">DE</button>
     </div><div class="key">
       <button onclick="appendTo('9')">9</button>
@@ -138,7 +167,7 @@ margin: 20px 55px 20px 1px;
       <button onclick="appendTo('6')">6</button>
       <button onclick="appendTo('5')">5</button>
       <button onclick="appendTo('4')">4</button>
-      <button  class="operator" onclick="appendTo('-')">-</button>
+      <button  class="operator1" onclick="appendTo('-')">-</button>
     </div><div class="key">
       <button onclick="appendTo('3')">3</button>
       <button onclick="appendTo('2')">2</button>
